@@ -1,0 +1,53 @@
+<ion-grid [fixed]="true">
+  <ion-row>
+    <ion-col size="10">
+      <ion-list class="borde" direction="xy" overflow-scroll="true">
+        <div class="form-container">
+          <ion-item position="floating" >
+            <ion-grid fixed>
+              <ion-row class="row header cabecera">
+                <ion-col class="col" size="1.7">Periodo</ion-col>
+                <ion-col class="col" size="1.7">Folio</ion-col>
+                <ion-col class="col" size="1.7">Matricula</ion-col>
+                <ion-col class="col" size="1.7">Apellido Paterno</ion-col>
+                <ion-col class="col" size="1.7">Apellido Materno</ion-col>
+                <ion-col class="col" size="1.7">Nombre(s)</ion-col>
+                <ion-col class="col" size="1.7">Ingenieria /<br>Licenciatura</ion-col>
+              </ion-row>
+              <ion-row class="row header" *ngFor="let Consultas of recuperarPeriodo" >
+                <ion-col class="col" size="1.7">{{Consultas.Descripcion}}</ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+                <ion-col class="col" size="1.7"></ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-item>
+        </div>
+      </ion-list>
+    </ion-col>
+    <ion-col fixed size="2">
+      <div slot="fixed">
+      <ion-input type="text" placeholder="Ingresa Folio" class="custom"></ion-input>
+      <ion-button class="centro" color="danger" size="medium" shape="round">
+        Borrar
+      </ion-button>
+      
+      <br>
+      <br>
+      <br>
+      <ion-button class="centro" color="secondary" size="medium" shape="round">
+        Guardar
+      </ion-button>
+    </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+  
+
+
+
+
+  

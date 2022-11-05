@@ -1,0 +1,127 @@
+/* iOS places the subtitle above the title */
+ion-item {
+    --background: none;
+    opacity:1;
+}
+
+.separacion{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.borde{
+    border: solid;
+    border-color: rgb(118, 32, 199);
+    border-style:groove;
+    border-radius: 40px;
+}
+
+.bordeIn{
+    border: solid;
+    border-color: #6e5794;
+}
+
+.clearfix{
+    display: grid;
+    justify-content: center;
+    
+}
+
+.centrado{
+    width: 33%;
+    padding: 25px;
+}
+
+.buton {
+    float: left;
+    padding: 2px 0;
+}
+
+.buton li {
+    float: left;
+    margin: 22px 22px 22px 40px;
+
+}
+.buton li a {
+    display: block;
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding-left: auto  ;    
+    padding-right: auto;
+}
+
+.form-container {
+    background-color: transparent;
+    width: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    height: auto;
+    align-content: center;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+}
+
+.form-container{
+    margin: 0 auto;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+.form-container input.input {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px;
+    border: solid 1px rgb(76, 0, 255);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.orden1{
+    margin: 0;
+    padding: 20px;
+    width: 25%;
+}
+
+.orden2{
+    margin: 0;
+    padding: 20px;
+    width: 33%;
+}
+
+ion-checkbox {
+    --size: 16px;
+    --background-checked: #6815ec;
+}
+
+ion-checkbox::part(container) {
+    border-radius: 6px;
+    border: 2px solid #6815ec;
+}
+
+.header .col {
+    background-color:rgb(211, 211, 211);
+  }
+  
+  .col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+  }
+  
+  .col:last-child {
+    border-right: solid 1px grey;
+  }
+  
+  .row:last-child .col {
+    border-bottom: solid 1px grey;
+  }
+
+  .centro {
+    text-align: center;
+  }

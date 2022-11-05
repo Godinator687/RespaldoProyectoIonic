@@ -1,0 +1,60 @@
+<form [formGroup]="datos_generales">
+  <ion-list>
+    <!--Campo para el nombre completo-->
+    <!--el cambio que se le hizo a cada campo es que para los nombres solamente acepten textos con un type dentro de cada input-->
+    <ion-item>
+      <ion-label position="floating">Nombre Completo:</ion-label>
+      <ion-input type = "text" formControlName="Nombre" placeholder="Ingrese su nombre o nombres"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.Nombre.invalid && datos_generales.controls.Nombre.touched">Requerido</ion-label>
+    </ion-item>
+
+    <!--Campo para el apellido materno, se copió tal cual el otro campo anterior para reducir el timepo de escribir
+    se sigue la misma idea de aceptar solamente texto en cada campo-->
+    <ion-item>
+      <ion-label position="floating">Apellido Paterno:</ion-label>
+      <!--Dentro de esta etiqueta se agregará un campo extra dentro del servicio para poder distinguir los apellidos
+      para ello se agrega la variable **ApellidoPaterno** y se manda a llamdar desde el servicio-->
+      <ion-input type = "text" formControlName="ApellidoPaterno" placeholder="Ingrese su apellido paterno"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.ApellidoPaterno.invalid && datos_generales.controls.ApellidoPaterno.touched">Requerido</ion-label>
+    </ion-item>
+
+    <!--Campo para el apellido materno
+    se sigue haciendo la misma táctica para agregar el apellido materno-->
+    <ion-item>
+      <ion-label position="floating">Apellido Materno</ion-label>
+      <ion-input type = "text" formControlName="ApellidoMaterno" placeholder="Ingrese su apellido materno"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.ApellidoMaterno.invalid && datos_generales.controls.ApellidoMaterno.touched">Requerido</ion-label>
+    </ion-item>
+
+    <!--Campo para colocar matriculas no mayores a 9 dígitos-->
+    <ion-item>
+      <ion-label position="floating">Matricula</ion-label>
+      <ion-input formControlName="Matricula" type="number"  max = "9" placeholder="Ingrese su matrícula de 9 dígitos"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.Matricula.invalid && datos_generales.controls.Matricula.touched">Requerido</ion-label>
+    </ion-item>
+
+  <!--Campo para ingresar contraseña, este campo tendrá la opción de tener el campo no visible o que muestre asteriscos
+  sin cambios-->
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input formControlName="Password" type="password" value="password"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.Password.invalid && datos_generales.controls.Password.touched">Requerido</ion-label>
+    </ion-item>
+
+    <!--Campo para ingresar el correo electronico, se mostrará un ejemplo de como tiene que ser un correo electrónico
+    se agregó un ejemplo de como debería de ir un correo electrónico-->
+    <ion-item>
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input formControlName="Email" type="email" placeholder="ejemplo@ejemplo.com"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.Email.invalid && datos_generales.controls.Email.touched">Requerido</ion-label>
+    </ion-item>
+
+    <!--Campo para ingresar un teléfono celular, se agregó un cambio de máximo 10 dígitos para el teléfono-->
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input formControlName="Telefono" type="number" max = "10" placeholder="888-888-8888"></ion-input>
+      <ion-label *ngIf="datos_generales.controls.Telefono.invalid && datos_generales.controls.Telefono.touched">Requerido</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button [disable]="!datos_generales.valid" (click)="onClick()"  expand="block" fill="clear" shape="round">Click me</ion-button>
+</form>

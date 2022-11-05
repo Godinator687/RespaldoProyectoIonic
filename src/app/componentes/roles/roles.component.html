@@ -1,0 +1,28 @@
+<div class="separacion"> 
+ 
+  <ion-list class="borde">
+    <div class="form-container">
+      <ion-item position="floating" >
+        <ion-grid fixed>
+          <ion-row class="row header" *ngFor="let Consultas of recuperarRol" >
+            <ion-col class="col" size="1.7">{{Consultas.Nombre}}</ion-col>
+            <ion-col class="col" size="3.4"></ion-col>
+            <ion-col class="col" size="3.4"> <ion-button color="danger" value="Eliminar" (click)="presentToast('top')" size="middle" shape="round"><ion-icon name="close-circle-outline"></ion-icon> Eliminar</ion-button>
+            </ion-col>
+            <ion-col class="col" size="3.4"> <ion-button color="dark" value="Modificar" (click)="presentToast('top')" size="middle" shape="round"><ion-icon name="build-outline"></ion-icon> Modificar</ion-button>
+            </ion-col>
+          </ion-row>
+          <br>
+          <ion-col class="clearfix">
+            <ion-button color="primary" value="Nuevo" (click)="presentToast('top')" size="large" shape="round"><ion-icon name="add-circle-outline"></ion-icon> Nuevo</ion-button>
+          </ion-col>
+        </ion-grid>
+        </ion-item>
+      </div>
+  </ion-list>
+</div>
+
+
+
+
+  

@@ -1,0 +1,119 @@
+/* iOS places the subtitle above the title */
+ion-item {
+    --background: none;
+    opacity:1;
+}
+
+.borde{
+    border: solid;
+    border-color: rgb(118, 32, 199);
+    border-style:groove;
+    border-radius: 10px;
+}
+
+.bordeIn{
+    border: solid;
+    border-color: #6e5794;
+}
+
+.clearfix{
+    display: grid;
+    justify-content: center;
+}
+
+
+.buton {
+    float: left;
+    padding: 2px 0;
+}
+
+.buton li {
+    float: left;
+    margin: 22px 22px 22px 40px;
+
+}
+.buton li a {
+    display: block;
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding-left: auto  ;    
+    padding-right: auto;
+}
+
+
+
+
+.orden1{
+    margin: 0;
+    padding: 20px;
+    width: 25%;
+}
+
+.orden2{
+    margin: 0;
+    padding: 20px;
+    width: 33%;
+}
+
+
+
+.header .col {
+    background-color:rgb(255, 255, 255);
+  }
+  
+ion-row{
+    border-left: solid 7px black;
+    vertical-align: middle;
+}
+  .col {
+    border: solid 1px rgb(0, 0, 0);
+    border-bottom-style: none;
+    vertical-align: middle;
+    border-right-style: none;
+    text-align: center;
+
+  }
+  
+  .col:last-child {
+    border-right: solid 1px rgb(79, 50, 134);
+    border-left: solid 1px black;
+  }
+  
+  .row:last-child .col {
+    border-bottom: solid 1px rgb(0, 0, 0);
+  }
+
+  .centro{
+    text-align: center;
+  }
+
+  .cabecera{
+    font-weight: bold;
+    vertical-align: middle;
+  }
+
+
+  .scrollVertical {
+    top: 0 !important;
+    bottom: 0;
+    right: 0 !important;
+    position: absolute;
+  }
+
+  .custom{
+    --background: #373737;
+    --color: #fff;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: .8;
+  
+    --padding-bottom: 10px;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --padding-top: 10px;
+  }
+
+  div[slot="fixed"] {
+    top: 50%;
+    right: 20px;
+  }

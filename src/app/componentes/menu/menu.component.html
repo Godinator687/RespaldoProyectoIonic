@@ -1,0 +1,116 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+
+    <ion-accordion-group>
+      <div *ngFor="let Opcion of recuperarOpcion; let i = index" >
+      <ion-accordion>
+        <ion-item slot="header" color="light">
+          <ion-label>{{Opcion.Opcion}}</ion-label>
+        </ion-item>
+        
+        <ion-segment slot="content" color="primary" [(ngModel)]="type" scrollable *ngFor="let Boton of Opcion.Elec">
+          <ion-menu-toggle>
+            <ion-segment value="Boton.Id"  scrollable value="Opcion.Id" >
+              <ion-segment-button value="{{Boton.Id_El}}">
+
+                <ion-item class="selec">
+                  <ion-button expand="block" fill="clear" shape="round">
+                    {{Boton.Nombre}}
+                  </ion-button>
+                </ion-item>
+              </ion-segment-button>
+            </ion-segment>
+          </ion-menu-toggle>
+
+        </ion-segment>
+      </ion-accordion>
+      </div>
+    </ion-accordion-group>
+
+  </ion-content>
+</ion-menu>
+  
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col>
+          <div [ngSwitch]="type">
+            <div *ngSwitchCase = "'1'" >
+              <div class="centroTit"><h1>Aspirantes</h1></div>
+              <app-aspirantes></app-aspirantes>
+            </div>
+            <div *ngSwitchCase = "'2'" >
+              <div class="centroTit"><h1>Consultas Aspirantes</h1></div>
+              <app-aspirantes-consultas></app-aspirantes-consultas>
+            </div>
+            <div *ngSwitchCase = "'3'" >
+              <div class="centroTit"><h1>Periodo</h1></div>
+              
+            </div>
+            <div *ngSwitchCase = "'4'" >
+              <div class="centroTit"><h1>Consultas Periodo</h1></div>
+              
+            </div>
+            <div *ngSwitchCase = "'5'" >
+              <div class="centroTit"><h1>Roles</h1></div>
+              <app-roles></app-roles>
+            </div>
+            <div *ngSwitchCase = "'6'" >
+              <div class="centroTit"><h1>Consultas Roles</h1></div>
+            </div>
+            <div *ngSwitchCase = "'7'" >
+              <div class="centroTit"><h1>Datos Generales</h1></div>
+              <app-datos-generales></app-datos-generales>
+            </div>
+            <div *ngSwitchCase = "'8'" >
+              <div class="centroTit"><h1>Consultas Datos Generales</h1></div>
+            </div>
+            <div *ngSwitchCase = "'9'" >
+              <div class="centroTit"><h1>Instituciones</h1></div>
+            </div>
+            <div *ngSwitchCase = "'10'" >
+              <div class="centroTit"><h1>Consultas Instituciones</h1></div>
+            </div>
+            <div *ngSwitchCase = "'11'" >
+              <div class="centroTit"><h1>Posgrados</h1></div>
+            </div>
+            <div *ngSwitchCase = "'12'" >
+              <div class="centroTit"><h1>Consultas Posgrados </h1></div>
+            </div>
+            <div *ngSwitchCase = "'13'" >
+              <div class="centroTit"><h1>Licenciaturas</h1></div>
+              <app-licenciaturas></app-licenciaturas>
+            </div>
+            <div *ngSwitchCase = "'14'" >
+              <div class="centroTit"><h1>Consultas Licenciaturas </h1></div>
+              <app-consultas-licenciaturas></app-consultas-licenciaturas>
+            </div>
+            <div *ngSwitchCase = "'15'" >
+              <div class="centroTit"><h1>Tipos de Evaluaciones</h1></div>
+              <app-tipo-evaluacion></app-tipo-evaluacion>
+            </div>
+            <div *ngSwitchCase = "'16'" >
+              <div class="centroTit"><h1>Consultas Tipos de Evaluaciones</h1></div>
+              <app-consultas-tipo-evaluacion></app-consultas-tipo-evaluacion>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</div>

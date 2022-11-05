@@ -1,0 +1,115 @@
+<div class="separacion"> 
+  <ion-list class="borde">
+    <ion-grid [fixed]="true">
+      <ion-row>
+        <ion-col size="12">
+          <div class="form-container">
+            <ion-item class="orden1" position="floating" >
+              <ion-select interface="action-sheet" placeholder="Periodo" >
+                <ion-select-option *ngFor="let Per of recuperarPeriodo" value="{{Per.Id}}">{{Per.Descripcion}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+            <ion-item class="orden1">
+              <ion-label position="floating">Folio</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item class="orden1">
+              <ion-label position="floating">Matricula</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item class="orden1">
+              <ion-label position="floating">Fecha</ion-label>
+              <ion-input value="{{ Fecha | date: 'mm/YYYY'}}" id="Fecha"></ion-input>
+              <ion-popover trigger="Fecha" size="flex">
+                <ng-template>
+                  <ion-datetime presentation="date" [(ngModel)]="Fecha" locale="Es-ES"></ion-datetime>
+                </ng-template>
+              </ion-popover>
+            </ion-item>
+            </div>
+            <div class="form-container">
+            <ion-item class="orden2">
+              <ion-label position="floating">Apellido Paterno</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item class="orden2">
+              <ion-label position="floating">Apellido Materno</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item class="orden2">
+              <ion-label position="floating">Nombre(s)</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            </div>
+            <div class="form-container">
+              <ion-item class="orden2" position="floating">
+                <ion-select interface="action-sheet" placeholder="Ocupación">
+                  <ion-select-option *ngFor="let Rol of recuperarRol" value="{{Rol.Id}}">{{Rol.Nombre}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <ion-item class="orden2" position="floating">
+                <ion-select interface="action-sheet" placeholder="Institución de Egreso">
+                  <ion-select-option *ngFor="let Inst of recuperarInst" value="{{Inst.Id}}">{{Inst.Nombre}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+              <ion-item class="orden2" position="floating">
+                <ion-select interface="action-sheet" placeholder="Ingenieria/Licenciatura">
+                  <ion-select-option *ngFor="let Ing of recuperarIngLic" value="{{Ing.Id}}">{{Ing.Nombre_Lic}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </div>
+            <div class="form-container">
+              <ion-item class="orden2">
+                <form>
+                    <ion-label>Tipo de Evaluacion</ion-label>
+                  <ion-item *ngFor="let Eval of recuperarEval">
+                    <ion-checkbox value="{{Eval.Id}}" slot="start"></ion-checkbox><ion-label>{{Eval.Nombre}}</ion-label>
+                  </ion-item>
+                </form>
+              </ion-item>
+              <ion-grid fixed>
+                <ion-row >
+                  <ion-col class="orden1">
+                    <ion-item>
+                      <ion-select interface="action-sheet" placeholder="Posgrado">
+                        <ion-select-option *ngFor="let Pos of recuperaPos" value="{{Pos.Id}}">{{Pos.Nombre_P}}</ion-select-option>
+                      </ion-select>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col class="orden1">
+                    <ion-item>
+                      <ion-label position="floating">Promedio General </ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col class="orden1">
+                    <ion-item>
+                      <ion-label position="floating">Motivos</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                  <ion-col class="orden1">
+                    <ion-item>
+                      <ion-label position="floating">Observaciones</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+            <div class="form-container">
+              <ion-grid class="centrado">
+                <ion-row >
+                  <ion-col class="clearfix">
+                    <ion-button color="primary" value="Nuevo" (click)="presentToast('top')" size="large" shape="round"><ion-icon name="add-circle-outline"></ion-icon> Crear</ion-button>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-list>
+</div>

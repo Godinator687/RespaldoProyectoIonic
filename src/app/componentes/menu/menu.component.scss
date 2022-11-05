@@ -1,0 +1,118 @@
+.centro{
+  text-align: center;
+  padding: 10%;
+}
+
+.centroTit{
+  text-align: center;
+  padding: 10px;
+
+}
+.titulo{
+  font-size: 28px;
+  font-family: Tahoma;
+  font-weight: bold;
+
+}
+
+ion-item {
+  --background: none;
+  opacity:1;
+}
+.selec{
+  float: left;
+  width: 250px;
+  padding: 10px;
+}
+
+
+.opcSelec {
+  text-align: center;
+  justify-content: center;
+  float:  left;
+  clear: left;
+}
+
+.separacion{
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.borde{
+border: solid;
+border-color: rgb(118, 32, 199);
+}
+
+.clearfix{
+    display: block;
+    clear: both;
+    line-height: 0;
+    height: 0;
+    font-size: 0;
+}
+
+.buton {
+  float: left;
+  padding: 2px 0;
+}
+
+.buton li {
+  float: left;
+  margin: 22px 22px 22px 40px;
+  
+}
+.buton li a {
+  display: block;
+  width: auto;
+  height: auto;
+  align-items: center;
+  padding-left: auto  ;    
+  padding-right: auto;
+}
+
+.form-container {
+  background-color: transparent;
+  width: auto;
+  border-radius: 5px;
+  overflow: hidden;
+  height: auto;
+  align-content: center;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.form-container{
+  margin: 0 auto;
+}
+
+.form-container label {
+  display: block;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.form-container input.input {
+  display: block;
+  box-sizing: border-box;
+  padding: 10px;
+  border: solid 1px rgb(76, 0, 255);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.orden1{
+  margin: 0;
+  padding: 20px;
+  width: 25%;
+}
+
+.orden2{
+  margin: 0;
+  padding: 20px;
+  width: 33%;
+}
+
+.colorf{
+  background-color: rgb(107, 168, 221);
+}
